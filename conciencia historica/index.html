@@ -54,6 +54,16 @@
         <a href="categorias.html">Explorar temas históricos</a>
     </section>
 
+    <section id="bienvenida">
+        <h2>¡Bienvenido!</h2>
+
+        <p>Conoce la historia y descubre todo lo que México tiene para contar.</p>
+
+        <button onclick="saludarVisitante()">
+            Iniciar recorrido
+        </button>
+    </section>
+
     <section id="introduccion">
         <h2>¿Por qué es importante conocer la historia?</h2>
 
@@ -69,5 +79,24 @@
 <footer>
     <p>Conciencia Historica </p>
 </footer>
+
+<script>
+    function saludarVisitante() {
+
+        let nombre = prompt("¡Hola! ¿Cuál es tu nombre?");
+
+        if (nombre != null && nombre.trim() != "") {
+
+            alert("¡Bienvenido/a " + nombre + "! Espero que disfrutes el recorrido por la historia de México.");
+
+        } else {
+
+            alert("¡No olvides escribir tu nombre para comenzar!");
+
+        }
+
+    }
+</script>
+
 </body>
 </html>

@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-
-<link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-    
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categorías | Conciencia Historia  </title>
+    <link rel="stylesheet" href="estilos.css">
+
 </head>
 <body>
 
@@ -38,6 +28,43 @@
             y conocer los acontecimientos que marcaron la historia de México.
         </p>
 
+<section id="selector-historico">
+
+    <h3>Explora un periodo histórico</h3>
+
+    <p>Selecciona el número del periodo que deseas conocer:</p>
+
+    <button onclick="mostrarPeriodo()">Elegir periodo</button>
+
+    <p id="informacion-periodo"></p>
+
+</section>
+<section id="calculadora-historica">
+    <h3>Calculadora histórica</h3>
+
+    <p>
+        ¿Quieres saber cuántos años han pasado entre dos fechas?
+    </p>
+
+    <button onclick="calcularAnios()">
+        Calcular años transcurridos
+    </button>
+    
+</section>
+<section id="buscador-historico">
+    <h3>Buscar temas históricos</h3>
+
+    <p>Escribe el nombre de un tema que quieras encontrar:</p>
+
+    <input
+        type="text"
+        id="buscar-tema"
+        placeholder="Ejemplo: Revolución Mexicana">
+
+    <button onclick="buscarTema()">Buscar</button>
+
+    <p id="resultado-busqueda"></p>
+</section>
         <section id="prehispanico">
             <h3>1. México prehispánico</h3>
 
@@ -158,7 +185,100 @@
         <a href="index.html">Volver al inicio</a>
     </footer>
 
-</body>
-</html>
+
+<script>
+
+function mostrarPeriodo() {
+
+    let opcion = prompt(
+        "ELIGE UN PERIODO HISTÓRICO\n\n" +
+        "1. México prehispánico\n" +
+        "2. Conquista y Virreinato\n" +
+        "3. Independencia de México\n" +
+        "4. Siglo XIX y Porfiriato\n" +
+        "5. Revolución y México contemporáneo"
+    );
+
+    let informacion = "";
+
+    switch (opcion) {
+
+        case "1":
+            informacion = "México prehispánico: Conoce las antiguas civilizaciones mesoamericanas.";
+            break;
+
+        case "2":
+            informacion = "Conquista y Virreinato: Descubre la llegada de los españoles y el dominio colonial.";
+            break;
+
+        case "3":
+            informacion = "Independencia: Conoce la lucha que permitió el nacimiento de México como nación independiente.";
+            break;
+
+        case "4":
+            informacion = "Siglo XIX y Porfiriato: Explora los cambios políticos y sociales de México.";
+            break;
+
+        case "5":
+            informacion = "Revolución y México contemporáneo: Aprende sobre la Revolución y la transformación del país.";
+            break;
+
+        default:
+            informacion = "Opción no válida. Por favor, selecciona un número del 1 al 5.";
+            break;
+    }
+
+    document.getElementById("informacion-periodo").textContent = informacion;
+
+}
+function calcularAnios() {
+    let fechaInicial = parseInt(prompt("Ingresa el año inicial:"));
+    let fechaFinal = parseInt(prompt("Ingresa el año final:"));
+
+    if (isNaN(fechaInicial) || isNaN(fechaFinal)) {
+        alert("Por favor, ingresa años válidos.");
+    } else if (fechaFinal < fechaInicial) {
+        alert("El año final no puede ser menor al inicial.");
+    } else {
+        let resultado = fechaFinal - fechaInicial;
+
+        alert("Han transcurrido " + resultado + " años.");
+    }
+}
+function buscarTema() {
+
+    let busqueda = document.getElementById("buscar-tema").value.toLowerCase().trim();
+
+    let temas = [
+        "Civilizaciones mesoamericanas",
+        "Cultura mexica",
+        "Conquista de México",
+        "Virreinato de Nueva España",
+        "Inicio de la Independencia",
+        "Consumación de la Independencia",
+        "Reforma liberal",
+        "Porfiriato",
+        "Revolución mexicana",
+        "Constitución Mexicana de 1917"
+    ];
+
+    let resultado = "";
+
+    for (let i = 0; i < temas.length; i++) {
+
+        if (temas[i].toLowerCase().includes(busqueda) && busqueda != "") {
+            resultado += temas[i] + "\n";
+        }
+    }
+
+    if (resultado != "") {
+        document.getElementById("resultado-busqueda").textContent =
+            "Temas encontrados:\n" + resultado;
+    } else {
+        document.getElementById("resultado-busqueda").textContent =
+            "No se encontraron temas. Intenta con otra palabra.";
+    }
+}
+</script>
 </body>
 </html>

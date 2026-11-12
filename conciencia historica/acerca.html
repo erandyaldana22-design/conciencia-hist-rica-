@@ -188,15 +188,46 @@
 </section>
 
 <script>
+
 document.getElementById("formulario-opinion")
     .addEventListener("submit", function(event) {
+
         event.preventDefault();
 
-        document.getElementById("mensaje-formulario").textContent =
-            "¡Gracias por compartir tu opinión!";
+        let nombre = document.getElementById("nombre").value.trim();
+        let tema = document.getElementById("tema").value;
+        let aprendizaje = document.getElementById("aprendizaje").value.trim();
+
+        let calificacion = document.querySelector(
+            'input[name="calificacion"]:checked'
+        );
+
+        if (tema == "" || aprendizaje == "" || calificacion == null) {
+            alert("Por favor, completa todos los campos obligatorios.");
+            return;
+        }
+
+        let mensaje = "";
+
+        if (calificacion.value == 5) {
+            mensaje = "¡Excelente! Nos alegra que te haya gustado nuestra página.";
+        } else if (calificacion.value == 4) {
+            mensaje = "¡Muy bien! Gracias por visitar Conciencia Histórica.";
+        } else if (calificacion.value == 3) {
+            mensaje = "¡Gracias por tu opinión! Esperamos seguir mejorando.";
+        } else {
+            mensaje = "Gracias por ayudarnos a mejorar nuestra página.";
+        }
+
+        if (nombre != "") {
+            mensaje = "¡Gracias, " + nombre + "! " + mensaje;
+        }
+
+        document.getElementById("mensaje-formulario").textContent = mensaje;
 
         this.reset();
     });
+
 </script>
     <footer>
         <p>Conciencia Historia</p>

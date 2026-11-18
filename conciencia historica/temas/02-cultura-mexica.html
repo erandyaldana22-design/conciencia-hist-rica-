@@ -1,37 +1,43 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cultura mexica | Conciencia Histórica</title>
-    
-<link rel="stylesheet" href="../estilos.css">
+
+    <link rel="stylesheet" href="../estilos.css">
 </head>
+
 <body>
 
     <header>
-        
-<figure class="imagen-historica">
-    <img src="../imagenes/cultura-mexica.png"
-         alt="Representación histórica de la cultura mexica">
-    <figcaption>
-        La cultura mexica destacó por su arquitectura,
-        organización política y conocimientos.
-    </figcaption>
-</figure>
+
         <h1>Conciencia Histórica</h1>
         <p>Un viaje por la historia de México</p>
 
-        <nav>
+        <nav aria-label="Navegación principal">
             <a href="../index.html">Inicio</a>
             <a href="../categorias.html">Categorías</a>
             <a href="../acerca.html">Acerca de</a>
         </nav>
+
     </header>
 
     <main>
+
+        <figure class="imagen-historica">
+            <img src="../imagenes/cultura-mexica.png"
+                 alt="Representación histórica de la cultura mexica">
+            <figcaption>
+                La cultura mexica destacó por su arquitectura,
+                organización política y conocimientos.
+            </figcaption>
+        </figure>
+
         <article>
+
             <h2>La cultura mexica</h2>
 
             <p>
@@ -155,27 +161,46 @@
                 </p>
             </section>
 
+            <section id="datos-curiosos">
+                <h3>Datos curiosos</h3>
+
+                <p>
+                    Presiona el botón para descubrir algunos datos
+                    interesantes sobre la cultura mexica.
+                </p>
+
+                <button type="button" onclick="mostrarDatos()">
+                    Mostrar datos curiosos
+                </button>
+
+                <ul id="lista-datos"></ul>
+            </section>
+
             <section id="fuentes">
                 <h3>8. Fuentes de consulta</h3>
 
                 <ul>
                     <li>
                         <a href="https://www.inah.gob.mx/"
-                           target="_blank" rel="noopener noreferrer">
+                           target="_blank"
+                           rel="noopener noreferrer">
                             Instituto Nacional de Antropología e Historia (INAH)
                         </a>
                     </li>
+
                     <li>
                         <a href="https://lugares.inah.gob.mx/"
-                           target="_blank" rel="noopener noreferrer">
+                           target="_blank"
+                           rel="noopener noreferrer">
                             Lugares INAH: patrimonio arqueológico e histórico
                         </a>
                     </li>
                 </ul>
             </section>
+
         </article>
 
-        <nav>
+        <nav aria-label="Navegación entre temas">
             <a href="01-civilizaciones-mesoamericanas.html">
                 Tema anterior
             </a>
@@ -183,12 +208,45 @@
             <a href="../categorias.html">
                 Volver a las categorías históricas
             </a>
+
+            <a href="03-conquista-de-mexico.html">
+                Siguiente tema
+            </a>
         </nav>
+
     </main>
 
     <footer>
-        <p>Conciencia Histórica </p>
+        <p>&copy; 2026 Conciencia Histórica. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        function mostrarDatos() {
+
+            const datos = [
+                "México-Tenochtitlan fue fundada tradicionalmente en el año 1325.",
+                "El nombre Tenochtitlan se relaciona con la tradición de Tenoch.",
+                "Las chinampas permitían aprovechar los terrenos del lago para cultivar.",
+                "El náhuatl era una de las lenguas principales de los mexicas.",
+                "El Templo Mayor estaba dedicado principalmente a Huitzilopochtli y Tláloc."
+            ];
+
+            const lista = document.getElementById("lista-datos");
+
+            lista.innerHTML = "";
+
+            for (let i = 0; i < datos.length; i++) {
+
+                const elemento = document.createElement("li");
+
+                elemento.textContent = datos[i];
+
+                lista.appendChild(elemento);
+            }
+
+            alert("¡Los datos curiosos se han mostrado correctamente!");
+        }
+    </script>
 
 </body>
 </html>

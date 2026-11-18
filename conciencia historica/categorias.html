@@ -1,16 +1,20 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categorías | Conciencia Historia  </title>
-    <link rel="stylesheet" href="estilos.css">
 
+    <title>Categorías | Conciencia Histórica</title>
+
+    <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
 
     <header>
-        <h1>Conciencia Historia</h1>
+        <h1>Conciencia Histórica</h1>
+
         <p>Explora las diferentes etapas de la historia de México</p>
 
         <nav>
@@ -21,6 +25,7 @@
     </header>
 
     <main>
+
         <h2>Categorías históricas</h2>
 
         <p>
@@ -28,44 +33,149 @@
             y conocer los acontecimientos que marcaron la historia de México.
         </p>
 
-<section id="selector-historico">
+        <!-- Cronología histórica -->
+        <section id="cronologia">
 
-    <h3>Explora un periodo histórico</h3>
+            <h3>Cronología de la historia de México</h3>
 
-    <p>Selecciona el número del periodo que deseas conocer:</p>
+            <p>
+                Consulta los principales periodos históricos y los acontecimientos
+                que marcaron cada etapa de la historia de México.
+            </p>
 
-    <button onclick="mostrarPeriodo()">Elegir periodo</button>
+            <table border="1">
 
-    <p id="informacion-periodo"></p>
+                <thead>
+                    <tr>
+                        <th>Periodo histórico</th>
+                        <th>Fecha</th>
+                        <th>Tema</th>
+                    </tr>
+                </thead>
 
-</section>
-<section id="calculadora-historica">
-    <h3>Calculadora histórica</h3>
+                <tbody>
 
-    <p>
-        ¿Quieres saber cuántos años han pasado entre dos fechas?
-    </p>
+                    <tr>
+                        <td>México prehispánico</td>
+                        <td>2500 a. C. – 1521</td>
+                        <td>Civilizaciones mesoamericanas</td>
+                    </tr>
 
-    <button onclick="calcularAnios()">
-        Calcular años transcurridos
-    </button>
-    
-</section>
-<section id="buscador-historico">
-    <h3>Buscar temas históricos</h3>
+                    <tr>
+                        <td>México prehispánico</td>
+                        <td>1325 – 1521</td>
+                        <td>Cultura mexica</td>
+                    </tr>
 
-    <p>Escribe el nombre de un tema que quieras encontrar:</p>
+                    <tr>
+                        <td>Conquista de México</td>
+                        <td>1519 – 1521</td>
+                        <td>Conquista de México</td>
+                    </tr>
 
-    <input
-        type="text"
-        id="buscar-tema"
-        placeholder="Ejemplo: Revolución Mexicana">
+                    <tr>
+                        <td>Virreinato</td>
+                        <td>1521 – 1821</td>
+                        <td>Virreinato de Nueva España</td>
+                    </tr>
 
-    <button onclick="buscarTema()">Buscar</button>
+                    <tr>
+                        <td>Independencia</td>
+                        <td>1810 – 1811</td>
+                        <td>Inicio de la Independencia</td>
+                    </tr>
 
-    <p id="resultado-busqueda"></p>
-</section>
+                    <tr>
+                        <td>Independencia</td>
+                        <td>1821</td>
+                        <td>Consumación de la Independencia</td>
+                    </tr>
+
+                    <tr>
+                        <td>Reforma Liberal</td>
+                        <td>1855 – 1861</td>
+                        <td>Reforma liberal</td>
+                    </tr>
+
+                    <tr>
+                        <td>Porfiriato</td>
+                        <td>1876 – 1911</td>
+                        <td>Porfiriato</td>
+                    </tr>
+
+                    <tr>
+                        <td>Revolución mexicana</td>
+                        <td>1910 – 1920</td>
+                        <td>Revolución mexicana</td>
+                    </tr>
+
+                    <tr>
+                        <td>México moderno</td>
+                        <td>1917</td>
+                        <td>Constitución Mexicana de 1917</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <!-- Selector de periodos históricos -->
+        <section id="selector-historico">
+
+            <h3>Explora un periodo histórico</h3>
+
+            <p>Selecciona el número del periodo que deseas conocer:</p>
+
+            <button onclick="mostrarPeriodo()">
+                Elegir periodo
+            </button>
+
+            <p id="informacion-periodo"></p>
+
+        </section>
+
+        <!-- Calculadora histórica -->
+        <section id="calculadora-historica">
+
+            <h3>Calculadora histórica</h3>
+
+            <p>
+                ¿Quieres saber cuántos años han pasado entre dos fechas?
+            </p>
+
+            <button onclick="calcularAnios()">
+                Calcular años transcurridos
+            </button>
+
+        </section>
+
+        <!-- Buscador de temas -->
+        <section id="buscador-historico">
+
+            <h3>Buscar temas históricos</h3>
+
+            <p>Escribe el nombre de un tema que quieras encontrar:</p>
+
+            <label for="buscar-tema">Nombre del tema:</label>
+
+            <input
+                type="text"
+                id="buscar-tema"
+                placeholder="Ejemplo: Revolución Mexicana">
+
+            <button onclick="buscarTema()">
+                Buscar
+            </button>
+
+            <p id="resultado-busqueda"></p>
+
+        </section>
+
+        <!-- México prehispánico -->
         <section id="prehispanico">
+
             <h3>1. México prehispánico</h3>
 
             <p>
@@ -74,20 +184,26 @@
             </p>
 
             <ul>
+
                 <li>
                     <a href="temas/01-civilizaciones-mesoamericanas.html">
                         Civilizaciones mesoamericanas
                     </a>
                 </li>
+
                 <li>
                     <a href="temas/02-cultura-mexica.html">
                         Cultura mexica
                     </a>
                 </li>
+
             </ul>
+
         </section>
 
+        <!-- Conquista y Virreinato -->
         <section id="conquista">
+
             <h3>2. Conquista y Virreinato</h3>
 
             <p>
@@ -96,21 +212,26 @@
             </p>
 
             <ul>
+
                 <li>
                     <a href="temas/03-conquista-de-mexico.html">
                         Conquista de México
                     </a>
                 </li>
+
                 <li>
-                   
-<a href="temas/04-virreinato-de-nueva-espana.html">
-    Virreinato de Nueva España
-</a>
+                    <a href="temas/04-virreinato-de-nueva-espana.html">
+                        Virreinato de Nueva España
+                    </a>
                 </li>
+
             </ul>
+
         </section>
 
+        <!-- Independencia -->
         <section id="independencia">
+
             <h3>3. Independencia y formación de México</h3>
 
             <p>
@@ -119,22 +240,26 @@
             </p>
 
             <ul>
-                <li>
 
-<a href="temas/05-inicio-de-la-independencia.html">
-    Inicio de la Independencia
-</a>
-                </li>
                 <li>
-
-<a href="temas/06-consumacion-de-la-independencia.html">
-    Consumación de la Independencia
-</a>
+                    <a href="temas/05-inicio-de-la-independencia.html">
+                        Inicio de la Independencia
+                    </a>
                 </li>
+
+                <li>
+                    <a href="temas/06-consumacion-de-la-independencia.html">
+                        Consumación de la Independencia
+                    </a>
+                </li>
+
             </ul>
+
         </section>
 
+        <!-- Siglo XIX y Porfiriato -->
         <section id="siglo-xix">
+
             <h3>4. Siglo XIX y Porfiriato</h3>
 
             <p>
@@ -143,20 +268,26 @@
             </p>
 
             <ul>
+
                 <li>
                     <a href="temas/07-reforma-liberal.html">
                         Reforma liberal
                     </a>
                 </li>
+
                 <li>
                     <a href="temas/08-porfiriato.html">
                         Porfiriato
                     </a>
                 </li>
+
             </ul>
+
         </section>
 
+        <!-- Revolución y México contemporáneo -->
         <section id="revolucion">
+
             <h3>5. Revolución y México contemporáneo</h3>
 
             <p>
@@ -165,120 +296,154 @@
             </p>
 
             <ul>
+
                 <li>
                     <a href="temas/09-revolucion-mexicana.html">
                         Revolución mexicana
                     </a>
                 </li>
+
                 <li>
-                   
-<a href="temas/10-constitucion-mexicana-1917.html">
-    Constitución Mexicana de 1917
-</a>
+                    <a href="temas/10-constitucion-mexicana-1917.html">
+                        Constitución Mexicana de 1917
+                    </a>
                 </li>
+
             </ul>
+
         </section>
+
     </main>
 
     <footer>
-        <p>Conciencia Historia </p>
+
+        <p>Conciencia Histórica</p>
+
         <a href="index.html">Volver al inicio</a>
+
     </footer>
 
+    <!-- JavaScript -->
+    <script>
 
-<script>
+        // Selector de periodos históricos
+        function mostrarPeriodo() {
 
-function mostrarPeriodo() {
+            let opcion = prompt(
+                "ELIGE UN PERIODO HISTÓRICO\n\n" +
+                "1. México prehispánico\n" +
+                "2. Conquista y Virreinato\n" +
+                "3. Independencia de México\n" +
+                "4. Siglo XIX y Porfiriato\n" +
+                "5. Revolución y México contemporáneo"
+            );
 
-    let opcion = prompt(
-        "ELIGE UN PERIODO HISTÓRICO\n\n" +
-        "1. México prehispánico\n" +
-        "2. Conquista y Virreinato\n" +
-        "3. Independencia de México\n" +
-        "4. Siglo XIX y Porfiriato\n" +
-        "5. Revolución y México contemporáneo"
-    );
+            let informacion = "";
 
-    let informacion = "";
+            switch (opcion) {
 
-    switch (opcion) {
+                case "1":
+                    informacion = "México prehispánico: Conoce las antiguas civilizaciones mesoamericanas.";
+                    break;
 
-        case "1":
-            informacion = "México prehispánico: Conoce las antiguas civilizaciones mesoamericanas.";
-            break;
+                case "2":
+                    informacion = "Conquista y Virreinato: Descubre la llegada de los españoles y el dominio colonial.";
+                    break;
 
-        case "2":
-            informacion = "Conquista y Virreinato: Descubre la llegada de los españoles y el dominio colonial.";
-            break;
+                case "3":
+                    informacion = "Independencia: Conoce la lucha que permitió el nacimiento de México como nación independiente.";
+                    break;
 
-        case "3":
-            informacion = "Independencia: Conoce la lucha que permitió el nacimiento de México como nación independiente.";
-            break;
+                case "4":
+                    informacion = "Siglo XIX y Porfiriato: Explora los cambios políticos y sociales de México.";
+                    break;
 
-        case "4":
-            informacion = "Siglo XIX y Porfiriato: Explora los cambios políticos y sociales de México.";
-            break;
+                case "5":
+                    informacion = "Revolución y México contemporáneo: Aprende sobre la Revolución y la transformación del país.";
+                    break;
 
-        case "5":
-            informacion = "Revolución y México contemporáneo: Aprende sobre la Revolución y la transformación del país.";
-            break;
+                default:
+                    informacion = "Opción no válida. Por favor, selecciona un número del 1 al 5.";
+                    break;
 
-        default:
-            informacion = "Opción no válida. Por favor, selecciona un número del 1 al 5.";
-            break;
-    }
+            }
 
-    document.getElementById("informacion-periodo").textContent = informacion;
+            document.getElementById("informacion-periodo").textContent = informacion;
 
-}
-function calcularAnios() {
-    let fechaInicial = parseInt(prompt("Ingresa el año inicial:"));
-    let fechaFinal = parseInt(prompt("Ingresa el año final:"));
-
-    if (isNaN(fechaInicial) || isNaN(fechaFinal)) {
-        alert("Por favor, ingresa años válidos.");
-    } else if (fechaFinal < fechaInicial) {
-        alert("El año final no puede ser menor al inicial.");
-    } else {
-        let resultado = fechaFinal - fechaInicial;
-
-        alert("Han transcurrido " + resultado + " años.");
-    }
-}
-function buscarTema() {
-
-    let busqueda = document.getElementById("buscar-tema").value.toLowerCase().trim();
-
-    let temas = [
-        "Civilizaciones mesoamericanas",
-        "Cultura mexica",
-        "Conquista de México",
-        "Virreinato de Nueva España",
-        "Inicio de la Independencia",
-        "Consumación de la Independencia",
-        "Reforma liberal",
-        "Porfiriato",
-        "Revolución mexicana",
-        "Constitución Mexicana de 1917"
-    ];
-
-    let resultado = "";
-
-    for (let i = 0; i < temas.length; i++) {
-
-        if (temas[i].toLowerCase().includes(busqueda) && busqueda != "") {
-            resultado += temas[i] + "\n";
         }
-    }
 
-    if (resultado != "") {
-        document.getElementById("resultado-busqueda").textContent =
-            "Temas encontrados:\n" + resultado;
-    } else {
-        document.getElementById("resultado-busqueda").textContent =
-            "No se encontraron temas. Intenta con otra palabra.";
-    }
-}
-</script>
+        // Calculadora histórica
+        function calcularAnios() {
+
+            let fechaInicial = parseInt(prompt("Ingresa el año inicial:"));
+            let fechaFinal = parseInt(prompt("Ingresa el año final:"));
+
+            if (isNaN(fechaInicial) || isNaN(fechaFinal)) {
+
+                alert("Por favor, ingresa años válidos.");
+
+            } else if (fechaFinal < fechaInicial) {
+
+                alert("El año final no puede ser menor al inicial.");
+
+            } else {
+
+                let resultado = fechaFinal - fechaInicial;
+
+                alert("Han transcurrido " + resultado + " años.");
+
+            }
+
+        }
+
+        // Buscador histórico
+        function buscarTema() {
+
+            let busqueda = document.getElementById("buscar-tema").value.toLowerCase().trim();
+
+            let temas = [
+
+                "Civilizaciones mesoamericanas",
+                "Cultura mexica",
+                "Conquista de México",
+                "Virreinato de Nueva España",
+                "Inicio de la Independencia",
+                "Consumación de la Independencia",
+                "Reforma liberal",
+                "Porfiriato",
+                "Revolución mexicana",
+                "Constitución Mexicana de 1917"
+
+            ];
+
+            let resultado = "";
+
+            for (let i = 0; i < temas.length; i++) {
+
+                if (temas[i].toLowerCase().includes(busqueda) && busqueda != "") {
+
+                    resultado += temas[i] + "\n";
+
+                }
+
+            }
+
+            if (resultado != "") {
+
+                document.getElementById("resultado-busqueda").textContent =
+                    "Temas encontrados:\n" + resultado;
+
+            } else {
+
+                document.getElementById("resultado-busqueda").textContent =
+                    "No se encontraron temas. Intenta con otra palabra.";
+
+            }
+
+        }
+
+    </script>
+
 </body>
+
 </html>

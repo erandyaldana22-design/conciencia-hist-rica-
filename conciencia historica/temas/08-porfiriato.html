@@ -1,26 +1,18 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Porfiriato | Conciencia Histórica</title>
-    
-<link rel="stylesheet" href="../estilos.css">
+
+    <link rel="stylesheet" href="../estilos.css">
 </head>
+
 <body>
 
     <header>
-        
-<figure class="imagen-historica">
-    <img src="../imagenes/porfiriato.png"
-         alt="Fotografía histórica de México durante el Porfiriato">
-    <figcaption>
-        Durante el Porfiriato, México experimentó la expansión
-        de los ferrocarriles y cambios económicos y sociales,
-        junto con profundas desigualdades.
-    </figcaption>
-</figure>
         <h1>Conciencia Histórica</h1>
         <p>Un viaje por la historia de México</p>
 
@@ -32,6 +24,17 @@
     </header>
 
     <main>
+
+        <figure class="imagen-historica">
+            <img src="../imagenes/porfiriato.png"
+                 alt="Fotografía histórica de México durante el Porfiriato">
+            <figcaption>
+                Durante el Porfiriato, México experimentó la expansión
+                de los ferrocarriles y cambios económicos y sociales,
+                junto con profundas desigualdades.
+            </figcaption>
+        </figure>
+
         <article>
             <h2>El Porfiriato</h2>
 
@@ -200,6 +203,21 @@
                 </p>
             </section>
 
+            <section id="datos-curiosos">
+                <h3>Datos curiosos</h3>
+
+                <p>
+                    Descubre algunos datos interesantes sobre
+                    el Porfiriato.
+                </p>
+
+                <button type="button" onclick="mostrarDatos()">
+                    Mostrar datos curiosos
+                </button>
+
+                <ul id="lista-datos"></ul>
+            </section>
+
             <section id="fuentes">
                 <h3>9. Fuentes de consulta</h3>
 
@@ -219,6 +237,7 @@
                     </li>
                 </ul>
             </section>
+
         </article>
 
         <nav>
@@ -234,12 +253,37 @@
                 Siguiente tema
             </a>
         </nav>
+
     </main>
 
     <footer>
-        <p>
-            Conciencia Histórica 
+        <p>Conciencia Histórica</p>
     </footer>
+
+    <script>
+        function mostrarDatos() {
+
+            const datos = [
+                "El Porfiriato se extendió de 1876 a 1911, aunque Manuel González gobernó entre 1880 y 1884.",
+                "Durante este periodo se expandió considerablemente la red ferroviaria de México.",
+                "El lema de la rebelión de Tuxtepec fue 'Sufragio efectivo, no reelección'.",
+                "Las huelgas de Cananea y Río Blanco fueron importantes expresiones del descontento obrero.",
+                "Porfirio Díaz renunció a la presidencia en mayo de 1911."
+            ];
+
+            const lista = document.getElementById("lista-datos");
+
+            lista.innerHTML = "";
+
+            for (let i = 0; i < datos.length; i++) {
+                const elemento = document.createElement("li");
+                elemento.textContent = datos[i];
+                lista.appendChild(elemento);
+            }
+
+            alert("¡Los datos curiosos se han mostrado correctamente!");
+        }
+    </script>
 
 </body>
 </html>

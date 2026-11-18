@@ -1,26 +1,18 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consumación de la Independencia | Conciencia Histórica</title>
-    
-<link rel="stylesheet" href="../estilos.css">
+
+    <link rel="stylesheet" href="../estilos.css">
 </head>
+
 <body>
 
     <header>
-        
-<figure class="imagen-historica">
-    <img src="../imagenes/consumacion-independencia.png"
-         alt="Representación histórica de la consumación de la Independencia de México">
-    <figcaption>
-        El 27 de septiembre de 1821, el Ejército Trigarante
-        entró a la Ciudad de México, marcando la consumación
-        de la Independencia.
-    </figcaption>
-</figure>
         <h1>Conciencia Histórica</h1>
         <p>Un viaje por la historia de México</p>
 
@@ -32,6 +24,17 @@
     </header>
 
     <main>
+
+        <figure class="imagen-historica">
+            <img src="../imagenes/consumacion-independencia.png"
+                 alt="Representación histórica de la consumación de la Independencia de México">
+            <figcaption>
+                El 27 de septiembre de 1821, el Ejército Trigarante
+                entró a la Ciudad de México, marcando la consumación
+                de la Independencia.
+            </figcaption>
+        </figure>
+
         <article>
             <h2>La consumación de la Independencia de México</h2>
 
@@ -201,6 +204,21 @@
                 </p>
             </section>
 
+            <section id="datos-curiosos">
+                <h3>Datos curiosos</h3>
+
+                <p>
+                    Descubre algunos datos interesantes sobre
+                    la consumación de la Independencia de México.
+                </p>
+
+                <button type="button" onclick="mostrarDatos()">
+                    Mostrar datos curiosos
+                </button>
+
+                <ul id="lista-datos"></ul>
+            </section>
+
             <section id="fuentes">
                 <h3>9. Fuentes de consulta</h3>
 
@@ -219,6 +237,7 @@
                     </li>
                 </ul>
             </section>
+
         </article>
 
         <nav>
@@ -234,13 +253,37 @@
                 Siguiente tema
             </a>
         </nav>
+
     </main>
 
     <footer>
-        <p>
-            Conciencia Histórica 
-        </p>
+        <p>Conciencia Histórica</p>
     </footer>
+
+    <script>
+        function mostrarDatos() {
+
+            const datos = [
+                "El Ejército Trigarante recibió ese nombre por las tres garantías del Plan de Iguala: religión, independencia y unión.",
+                "El 27 de septiembre de 1821, el Ejército Trigarante entró a la Ciudad de México.",
+                "La entrada del Ejército Trigarante ocurrió once años después del inicio de la lucha por la Independencia.",
+                "El 28 de septiembre de 1821 se firmó el Acta de Independencia del Imperio Mexicano.",
+                "La consumación de la Independencia no significó que todos los problemas políticos y sociales del país terminaran."
+            ];
+
+            const lista = document.getElementById("lista-datos");
+
+            lista.innerHTML = "";
+
+            for (let i = 0; i < datos.length; i++) {
+                const elemento = document.createElement("li");
+                elemento.textContent = datos[i];
+                lista.appendChild(elemento);
+            }
+
+            alert("¡Los datos curiosos se han mostrado correctamente!");
+        }
+    </script>
 
 </body>
 </html>

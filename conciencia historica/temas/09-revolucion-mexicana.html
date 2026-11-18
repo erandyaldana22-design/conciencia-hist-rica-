@@ -1,26 +1,18 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revolución mexicana | Conciencia Histórica</title>
-    
-<link rel="stylesheet" href="../estilos.css">
+
+    <link rel="stylesheet" href="../estilos.css">
 </head>
+
 <body>
 
     <header>
-        
-<figure class="imagen-historica">
-    <img src="../imagenes/revolucion-mexicana.png"
-         alt="Fotografía histórica de la Revolución Mexicana">
-    <figcaption>
-        La Revolución Mexicana comenzó en 1910 y reunió
-        a distintos grupos que buscaban cambios políticos
-        y sociales en el país.
-    </figcaption>
-</figure>
         <h1>Conciencia Histórica</h1>
         <p>Un viaje por la historia de México</p>
 
@@ -32,6 +24,17 @@
     </header>
 
     <main>
+
+        <figure class="imagen-historica">
+            <img src="../imagenes/revolucion-mexicana.png"
+                 alt="Fotografía histórica de la Revolución Mexicana">
+            <figcaption>
+                La Revolución Mexicana comenzó en 1910 y reunió
+                a distintos grupos que buscaban cambios políticos
+                y sociales en el país.
+            </figcaption>
+        </figure>
+
         <article>
             <h2>La Revolución mexicana</h2>
 
@@ -233,6 +236,21 @@
                 </p>
             </section>
 
+            <section id="datos-curiosos">
+                <h3>Datos curiosos</h3>
+
+                <p>
+                    Descubre algunos datos interesantes sobre
+                    la Revolución mexicana.
+                </p>
+
+                <button type="button" onclick="mostrarDatos()">
+                    Mostrar datos curiosos
+                </button>
+
+                <ul id="lista-datos"></ul>
+            </section>
+
             <section id="fuentes">
                 <h3>10. Fuentes de consulta</h3>
 
@@ -252,6 +270,7 @@
                     </li>
                 </ul>
             </section>
+
         </article>
 
         <nav>
@@ -267,13 +286,37 @@
                 Siguiente tema
             </a>
         </nav>
+
     </main>
 
     <footer>
-        <p>
-            Conciencia Histórica 
-        </p>
+        <p>Conciencia Histórica</p>
     </footer>
+
+    <script>
+        function mostrarDatos() {
+
+            const datos = [
+                "El movimiento revolucionario comenzó el 20 de noviembre de 1910, de acuerdo con el llamado del Plan de San Luis.",
+                "Emiliano Zapata fue uno de los principales representantes de las demandas agrarias del sur de México.",
+                "Francisco Villa encabezó la División del Norte, una de las fuerzas revolucionarias más conocidas.",
+                "La Constitución de 1917 fue promulgada en la ciudad de Querétaro.",
+                "El artículo 123 de la Constitución de 1917 estableció importantes derechos para los trabajadores."
+            ];
+
+            const lista = document.getElementById("lista-datos");
+
+            lista.innerHTML = "";
+
+            for (let i = 0; i < datos.length; i++) {
+                const elemento = document.createElement("li");
+                elemento.textContent = datos[i];
+                lista.appendChild(elemento);
+            }
+
+            alert("¡Los datos curiosos se han mostrado correctamente!");
+        }
+    </script>
 
 </body>
 </html>

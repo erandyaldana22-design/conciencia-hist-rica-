@@ -1,26 +1,18 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Constitución mexicana de 1917 | Conciencia Histórica</title>
-    
-<link rel="stylesheet" href="../estilos.css">
+
+    <link rel="stylesheet" href="../estilos.css">
 </head>
+
 <body>
 
     <header>
-        
-<figure class="imagen-historica">
-    <img src="../imagenes/constitucion-1917.png"
-         alt="Documento histórico de la Constitución mexicana de 1917">
-    <figcaption>
-        Promulgada el 5 de febrero de 1917, la Constitución
-        estableció derechos sociales y principios fundamentales
-        para la organización de México.
-    </figcaption>
-</figure>
         <h1>Conciencia Histórica</h1>
         <p>Un viaje por la historia de México</p>
 
@@ -32,6 +24,17 @@
     </header>
 
     <main>
+
+        <figure class="imagen-historica">
+            <img src="../imagenes/constitucion-1917.png"
+                 alt="Documento histórico de la Constitución mexicana de 1917">
+            <figcaption>
+                Promulgada el 5 de febrero de 1917, la Constitución
+                estableció derechos sociales y principios fundamentales
+                para la organización de México.
+            </figcaption>
+        </figure>
+
         <article>
             <h2>La Constitución mexicana de 1917</h2>
 
@@ -214,6 +217,21 @@
                 </p>
             </section>
 
+            <section id="datos-curiosos">
+                <h3>Datos curiosos</h3>
+
+                <p>
+                    Descubre algunos datos interesantes sobre
+                    la Constitución mexicana de 1917.
+                </p>
+
+                <button type="button" onclick="mostrarDatos()">
+                    Mostrar datos curiosos
+                </button>
+
+                <ul id="lista-datos"></ul>
+            </section>
+
             <section id="fuentes">
                 <h3>10. Fuentes de consulta</h3>
 
@@ -233,6 +251,7 @@
                     </li>
                 </ul>
             </section>
+
         </article>
 
         <nav>
@@ -248,13 +267,37 @@
                 Volver al inicio
             </a>
         </nav>
+
     </main>
 
     <footer>
-        <p>
-            Conciencia Histórica 
-        </p>
+        <p>Conciencia Histórica</p>
     </footer>
+
+    <script>
+        function mostrarDatos() {
+
+            const datos = [
+                "La Constitución fue promulgada el 5 de febrero de 1917 en Querétaro.",
+                "Fue una de las primeras constituciones del mundo en incorporar derechos sociales.",
+                "El artículo 3 aborda los principios relacionados con la educación.",
+                "El artículo 27 establece principios sobre la propiedad de tierras y recursos naturales.",
+                "El artículo 123 reconoce derechos fundamentales de las personas trabajadoras."
+            ];
+
+            const lista = document.getElementById("lista-datos");
+
+            lista.innerHTML = "";
+
+            for (let i = 0; i < datos.length; i++) {
+                const elemento = document.createElement("li");
+                elemento.textContent = datos[i];
+                lista.appendChild(elemento);
+            }
+
+            alert("¡Los datos curiosos se han mostrado correctamente!");
+        }
+    </script>
 
 </body>
 </html>

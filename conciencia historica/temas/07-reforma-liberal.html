@@ -1,25 +1,18 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reforma liberal | Conciencia Histórica</title>
-    
-<link rel="stylesheet" href="../estilos.css">
+
+    <link rel="stylesheet" href="../estilos.css">
 </head>
+
 <body>
 
     <header>
-        
-<figure class="imagen-historica">
-    <img src="../imagenes/reforma-liberal.png"
-         alt="Retrato histórico de Benito Juárez durante la Reforma Liberal">
-    <figcaption>
-        Benito Juárez impulsó importantes reformas liberales
-        que transformaron la organización política y social de México.
-    </figcaption>
-</figure>
         <h1>Conciencia Histórica</h1>
         <p>Un viaje por la historia de México</p>
 
@@ -31,6 +24,16 @@
     </header>
 
     <main>
+
+        <figure class="imagen-historica">
+            <img src="../imagenes/reforma-liberal.png"
+                 alt="Retrato histórico de Benito Juárez durante la Reforma Liberal">
+            <figcaption>
+                Benito Juárez impulsó importantes reformas liberales
+                que transformaron la organización política y social de México.
+            </figcaption>
+        </figure>
+
         <article>
             <h2>La Reforma liberal en México</h2>
 
@@ -205,6 +208,21 @@
                 </p>
             </section>
 
+            <section id="datos-curiosos">
+                <h3>Datos curiosos</h3>
+
+                <p>
+                    Descubre algunos datos interesantes sobre
+                    la Reforma liberal en México.
+                </p>
+
+                <button type="button" onclick="mostrarDatos()">
+                    Mostrar datos curiosos
+                </button>
+
+                <ul id="lista-datos"></ul>
+            </section>
+
             <section id="fuentes">
                 <h3>9. Fuentes de consulta</h3>
 
@@ -224,6 +242,7 @@
                     </li>
                 </ul>
             </section>
+
         </article>
 
         <nav>
@@ -239,13 +258,37 @@
                 Siguiente tema
             </a>
         </nav>
+
     </main>
 
     <footer>
-        <p>
-            Conciencia Histórica 
-        </p>
+        <p>Conciencia Histórica</p>
     </footer>
+
+    <script>
+        function mostrarDatos() {
+
+            const datos = [
+                "La Revolución de Ayutla comenzó en 1854 y buscaba terminar con el gobierno de Santa Anna.",
+                "La Constitución de 1857 estableció una república representativa, democrática y federal.",
+                "La Guerra de Reforma también es conocida como Guerra de los Tres Años.",
+                "Benito Juárez promulgó importantes Leyes de Reforma en 1859.",
+                "La restauración de la República ocurrió en 1867, después de la caída del Segundo Imperio Mexicano."
+            ];
+
+            const lista = document.getElementById("lista-datos");
+
+            lista.innerHTML = "";
+
+            for (let i = 0; i < datos.length; i++) {
+                const elemento = document.createElement("li");
+                elemento.textContent = datos[i];
+                lista.appendChild(elemento);
+            }
+
+            alert("¡Los datos curiosos se han mostrado correctamente!");
+        }
+    </script>
 
 </body>
 </html>

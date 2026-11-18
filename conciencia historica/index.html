@@ -1,102 +1,123 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-<link rel="stylesheet" href="estilos.css">
+
+    <title>Conciencia Histórica | Inicio</title>
+
+    <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
-    
-<header>
-    <h1>Conciencia Historica</h1>
 
-<section class="video-presentacion">
-    <h2>¿Qué es la Conciencia Histórica?</h2>
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>Conciencia Histórica</h1>
 
-    <p>
-        Conocer el pasado ayuda a comprender el presente
-        y reflexionar sobre el futuro.
-    </p>
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav aria-label="Menú principal">
+            <a href="index.html">Inicio</a>
+            <a href="categorias.html">Categorías</a>
+            <a href="acerca.html">Acerca de</a>
+        </nav>
+    </header>
 
-    <div class="contenedor-video">
-        <iframe
-            src="https://www.youtube.com/embed/ADJkRuIqCbY"
-            title="¿Qué es la Conciencia Histórica?"
-            allowfullscreen>
-        </iframe>
-    </div>
-</section>
+    <main>
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="categorias.html">Categorías</a>
-        <a href="acerca.html">Acerca de</a>
-    </nav>
-</header>
+        <!-- PRESENTACIÓN DEL VIDEO -->
+        <section class="video-presentacion">
+            <h2>¿Qué es la Conciencia Histórica?</h2>
 
-<main>
-    <section id="inicio">
-        <h2>Descubre nuestra historia</h2>
+            <p>
+                Conocer el pasado ayuda a comprender el presente
+                y reflexionar sobre el futuro.
+            </p>
 
-        <p>
-            Bienvenido a Conciencia Histórica, un espacio
-            dedicado a conocer y comprender los acontecimientos
-            que han marcado la historia de México.
-        </p>
+            <div class="contenedor-video">
+                <iframe
+                    src="https://www.youtube.com/embed/ADJkRuIqCbY"
+                    title="¿Qué es la Conciencia Histórica?"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write;
+                    encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
 
-        <p>
-            Explora las diferentes épocas, conoce a sus protagonistas
-            y descubre cómo el pasado ha influido en nuestra sociedad actual.
-        </p>
+        <!-- INICIO -->
+        <section id="inicio">
+            <h2>Descubre nuestra historia</h2>
 
-        <a href="categorias.html">Explorar temas históricos</a>
-    </section>
+            <p>
+                Bienvenido a Conciencia Histórica, un espacio
+                dedicado a conocer y comprender los acontecimientos
+                que han marcado la historia de México.
+            </p>
 
-    <section id="bienvenida">
-        <h2>¡Bienvenido!</h2>
+            <p>
+                Explora las diferentes épocas, conoce a sus protagonistas
+                y descubre cómo el pasado ha influido en nuestra sociedad actual.
+            </p>
 
-        <p>Conoce la historia y descubre todo lo que México tiene para contar.</p>
+            <a href="categorias.html">Explorar temas históricos</a>
+        </section>
 
-        <button onclick="saludarVisitante()">
-            Iniciar recorrido
-        </button>
-    </section>
+        <!-- BIENVENIDA -->
+        <section id="bienvenida">
+            <h2>¡Bienvenido!</h2>
 
-    <section id="introduccion">
-        <h2>¿Por qué es importante conocer la historia?</h2>
+            <p>
+                Conoce la historia y descubre todo lo que México
+                tiene para contar.
+            </p>
 
-        <p>
-            Estudiar la historia nos permite comprender el origen
-            de nuestras costumbres, nuestra cultura y nuestra identidad.
-            También nos ayuda a reflexionar sobre los acontecimientos
-            del pasado y sus consecuencias en el presente.
-        </p>
-    </section>
-</main>
+            <button type="button" onclick="saludarVisitante()">
+                Iniciar recorrido
+            </button>
+        </section>
 
-<footer>
-    <p>Conciencia Historica </p>
-</footer>
+        <!-- IMPORTANCIA DE LA HISTORIA -->
+        <section id="introduccion">
+            <h2>¿Por qué es importante conocer la historia?</h2>
 
-<script>
-    function saludarVisitante() {
+            <p>
+                Estudiar la historia nos permite comprender el origen
+                de nuestras costumbres, nuestra cultura y nuestra identidad.
+                También nos ayuda a reflexionar sobre los acontecimientos
+                del pasado y sus consecuencias en el presente.
+            </p>
+        </section>
 
-        let nombre = prompt("¡Hola! ¿Cuál es tu nombre?");
+    </main>
 
-        if (nombre != null && nombre.trim() != "") {
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>Conciencia Histórica</p>
+    </footer>
 
-            alert("¡Bienvenido/a " + nombre + "! Espero que disfrutes el recorrido por la historia de México.");
+    <!-- JAVASCRIPT -->
+    <script>
+        function saludarVisitante() {
 
-        } else {
+            let nombre = prompt("¡Hola! ¿Cuál es tu nombre?");
 
-            alert("¡No olvides escribir tu nombre para comenzar!");
+            if (nombre != null && nombre.trim() != "") {
+
+                alert("¡Bienvenido/a " + nombre +
+                    "! Espero que disfrutes el recorrido por la historia de México.");
+
+            } else {
+
+                alert("¡No olvides escribir tu nombre para comenzar!");
+
+            }
 
         }
-
-    }
-</script>
+    </script>
 
 </body>
 </html>
